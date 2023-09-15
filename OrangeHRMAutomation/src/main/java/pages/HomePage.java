@@ -35,6 +35,10 @@ public class HomePage {
     @FindBy(css = "a[href='/web/index.php/auth/logout'][class='oxd-userdropdown-link']")
     WebElement logoutButton;
 
+    @FindBy(xpath = "//input[@placeholder='Search']")
+    WebElement searchInput;
+
+
     public HomePage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -63,5 +67,27 @@ public class HomePage {
     public void clickOnLogoutButton(){
         wait.until(ExpectedConditions.visibilityOf(logoutButton));
         logoutButton.click();
+    }
+
+    public void setSearchTextBox(String str)
+    {
+        wait.until(ExpectedConditions.visibilityOf(searchInput));
+        searchInput.sendKeys(str);
+    }
+    public boolean itemIsTheOnlyOne(String str)
+    {
+        WebElement ulElement = driver.findElement(By.cssSelector("ul.oxd-main-menu"));
+        wait.until(ExpectedConditions.visibilityOf(ulElement));
+        List<WebElement> liElements = ulElement.findElements(By.cssSelector("li.oxd-main-menu-item-wrapper"));
+        //List<WebElement> liElements = ulElement.findElements(By.cssSelector("li"));
+        int itemCount = 0;
+        for (WebElement li : liElements) {
+            if (li.getText().contains(str)) {
+                itemCount++;
+            }
+        }
+
+        return itemCount == 1;
+
     }
 }

@@ -63,4 +63,9 @@ public class MyInfoSteps
     public void iClickOnSaveContactButton() {
         myInfoPage.clickOnSaveContactButton();
     }
+
+    @And("I verify {string} is the text on middle name")
+    public void iVerifyIsTheTextOnMiddleName(String str) throws InterruptedException {
+        Assertions.assertEquals(myInfoPage.verifyMiddleNameTextBox(),str);
+    }
 }

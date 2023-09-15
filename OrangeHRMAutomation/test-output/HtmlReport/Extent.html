@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>sept 13, 2023 09:21:01 a. m.</span>
+			<span class='label blue darken-3 suite-start-time'>sept 15, 2023 05:50:20 p. m.</span>
 			</a>
 		</ul>
 	</div>
@@ -76,8 +76,13 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@DeleteBuzzMessage</a></li>
+					<li><a href='#'>@loginWithValidCredentials</a></li>
+					<li><a href='#'>@AddBuzzMessage</a></li>
+					<li><a href='#'>@loginWithInvalidCredentials</a></li>
 					<li><a href='#'>@EditContactInfo</a></li>
 					<li><a href='#'>@EditPersonalDetails</a></li>
+					<li><a href='#'>@logoutCorrectly</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -120,7 +125,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='strong'>4</span> features passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -138,7 +143,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='strong'>8</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,7 +163,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>18</span> steps passed</span>
+                    <span class='strong'>56</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -187,8 +192,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Edit MyInfo on OrangeHRM</span>
-						<span class='test-time'>sept 13, 2023 09:21:02 a. m.</span>
+						<span class='test-name'>Add Buzz Message on OrangeHRM</span>
+						<span class='test-time'>sept 15, 2023 05:50:22 p. m.</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -201,7 +206,284 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 30.056</span>
+	<span class='duration right label'>00 00 26.033</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: New Buzz Newsfeed</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@AddBuzzMessage</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='4' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM Home web page</div>
+
+
+		</li>
+		<li test-id='5' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnBuzzNewsFeed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I click on Buzz NewsFeed</div>
+
+
+		</li>
+		<li test-id='6' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.addMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I add the following text "Hello, world! Ready to roll" to the buzz newsfeed</div>
+
+
+		</li>
+		<li test-id='7' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.clickOnPostButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on Post Button</div>
+
+
+		</li>
+		<li test-id='8' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.verifySuccessPostMessage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A success message should be shown</div>
+
+
+		</li>
+		<li test-id='9' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.verifyMessageDisplayed(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And The message should be displayed as "Hello, world! Ready to roll"</div>
+
+
+		</li>
+		<li test-id='10' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.logout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I logout</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='12' status='pass'>
+
+	<span class='duration right label'>00 00 12.225</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Delete Buzz Newsfeed</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@DeleteBuzzMessage</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='14' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM Home web page</div>
+
+
+		</li>
+		<li test-id='15' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnBuzzNewsFeed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I click on Buzz NewsFeed</div>
+
+
+		</li>
+		<li test-id='16' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.addMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I add the following text "Testing 2" to the buzz newsfeed</div>
+
+
+		</li>
+		<li test-id='17' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.clickOnPostButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on Post Button</div>
+
+
+		</li>
+		<li test-id='18' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.verifySuccessPostMessage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A success message should be shown</div>
+
+
+		</li>
+		<li test-id='19' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.clickOnDeleteButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on delete button</div>
+
+
+		</li>
+		<li test-id='20' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BuzzSteps.confirmDeletingTheMessage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I confirm deleting the message</div>
+
+
+		</li>
+		<li test-id='21' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.MyInfoSteps.aSuccessMessageShouldBeDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A success message should be displayed</div>
+
+
+		</li>
+		<li test-id='22' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.logout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I logout</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Login OrangeHRM App</span>
+						<span class='test-time'>sept 15, 2023 05:51:00 p. m.</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='25' status='pass'>
+
+	<span class='duration right label'>00 00 11.201</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Login into Orange HRM web page with valid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@loginWithValidCredentials</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='27' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.CommonSteps.goToOrangePage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM web page</div>
+
+
+		</li>
+		<li test-id='28' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name field with "Admin"</div>
+
+
+		</li>
+		<li test-id='29' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password field with "admin123"</div>
+
+
+		</li>
+		<li test-id='30' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</div>
+
+
+		</li>
+		<li test-id='31' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home page should be displayed</div>
+
+
+		</li>
+		<li test-id='32' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.logout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I logout</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='34' status='pass'>
+
+	<span class='duration right label'>00 00 11.818</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Logout correctly after successful login</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@logoutCorrectly</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='36' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.CommonSteps.goToOrangePage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM web page</div>
+
+
+		</li>
+		<li test-id='37' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name field with "Admin"</div>
+
+
+		</li>
+		<li test-id='38' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password field with "admin123"</div>
+
+
+		</li>
+		<li test-id='39' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</div>
+
+
+		</li>
+		<li test-id='40' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home page should be displayed</div>
+
+
+		</li>
+		<li test-id='41' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.logout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I logout</div>
+
+
+		</li>
+		<li test-id='42' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.theLoginPageShouldBeDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The login page should be displayed</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='44' status='pass'>
+
+	<span class='duration right label'>00 00 08.526</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Login into Orange HRM web page with invalid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@loginWithInvalidCredentials</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='46' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.CommonSteps.goToOrangePage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM web page</div>
+
+
+		</li>
+		<li test-id='47' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name field with "wrong_user"</div>
+
+
+		</li>
+		<li test-id='48' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password field with "wrong_password"</div>
+
+
+		</li>
+		<li test-id='49' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</div>
+
+
+		</li>
+		<li test-id='50' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.verifyLoginErrorMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then An error message that says "Invalid Credentials" should be displayed</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='52'>
+					<div class='test-heading'>
+						<span class='test-name'>Edit MyInfo on OrangeHRM</span>
+						<span class='test-time'>sept 15, 2023 05:51:31 p. m.</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='53' status='pass'>
+
+	<span class='duration right label'>00 00 21.395</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Edit user personal details</div>
 	</div>
@@ -212,56 +494,56 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='4' class='node given Pass' status='Pass'>
+		<li test-id='55' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM Home web page</div>
 
 
 		</li>
-		<li test-id='5' class='node given Pass' status='Pass'>
+		<li test-id='56' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnMyInfoButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I click on My Info button</div>
 
 
 		</li>
-		<li test-id='6' class='node and Pass' status='Pass'>
+		<li test-id='57' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.infoPageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And My Info page is displayed</div>
 
 
 		</li>
-		<li test-id='7' class='node when Pass' status='Pass'>
+		<li test-id='58' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iClickOnPersonalDetailsButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on Personal Details button</div>
 
 
 		</li>
-		<li test-id='8' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iChangeMiddleNameTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I change Middle Name to "Carlos"</div>
+		<li test-id='59' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iChangeMiddleNameTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I change Middle Name to "Benjamin"</div>
 
 
 		</li>
-		<li test-id='9' class='node and Pass' status='Pass'>
+		<li test-id='60' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iChangeDriversLicenseNumberTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I change Drivers License number to "34650211"</div>
 
 
 		</li>
-		<li test-id='10' class='node and Pass' status='Pass'>
+		<li test-id='61' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iClickOnSaveButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on Save button</div>
 
 
 		</li>
-		<li test-id='11' class='node then Pass' status='Pass'>
+		<li test-id='62' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.aSuccessMessageShouldBeDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A success message should be displayed</div>
 
 
 		</li>
-		<li test-id='12' class='node and Pass' status='Pass'>
+		<li test-id='63' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.logout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I logout</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='14' status='pass'>
+<div class='scenario node' test-id='65' status='pass'>
 
-	<span class='duration right label'>00 00 12.822</span>
+	<span class='duration right label'>00 00 19.838</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Edit user contact details</div>
 	</div>
@@ -272,47 +554,95 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='16' class='node given Pass' status='Pass'>
+		<li test-id='67' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM Home web page</div>
 
 
 		</li>
-		<li test-id='17' class='node given Pass' status='Pass'>
+		<li test-id='68' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnMyInfoButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I click on My Info button</div>
 
 
 		</li>
-		<li test-id='18' class='node and Pass' status='Pass'>
+		<li test-id='69' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.infoPageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And My Info page is displayed</div>
 
 
 		</li>
-		<li test-id='19' class='node when Pass' status='Pass'>
+		<li test-id='70' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iClickOnContactDetailsButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on Contact Details button</div>
 
 
 		</li>
-		<li test-id='20' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iChangeMobileNumberTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I change mobile number to "568924214"</div>
+		<li test-id='71' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iChangeMobileNumberTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I change mobile number to "00000"</div>
 
 
 		</li>
-		<li test-id='21' class='node and Pass' status='Pass'>
+		<li test-id='72' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iChangeSecondEmailTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I change second email to "testing@orange.hrm"</div>
 
 
 		</li>
-		<li test-id='22' class='node and Pass' status='Pass'>
+		<li test-id='73' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.iClickOnSaveContactButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on Save Contact button</div>
 
 
 		</li>
-		<li test-id='23' class='node then Pass' status='Pass'>
+		<li test-id='74' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.MyInfoSteps.aSuccessMessageShouldBeDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A success message should be displayed</div>
 
 
 		</li>
-		<li test-id='24' class='node and Pass' status='Pass'>
+		<li test-id='75' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.logout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I logout</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='77'>
+					<div class='test-heading'>
+						<span class='test-name'>Search sector on OrangeHRM</span>
+						<span class='test-time'>sept 15, 2023 05:52:13 p. m.</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='78' status='pass'>
+
+	<span class='duration right label'>00 00 07.481</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Edit user personal details</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='80' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in Orange HRM Home web page</div>
+
+
+		</li>
+		<li test-id='81' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.iSearchOnSearchMenu(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I Search "Buzz" on search menu</div>
+
+
+		</li>
+		<li test-id='82' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.theOptionShouldBeTheOnlyOne(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The option "Buzz" should be the only one</div>
+
+
+		</li>
+		<li test-id='83' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.logout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I logout</div>
 
 
@@ -363,6 +693,138 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
+						<span class='category-name'>@DeleteBuzzMessage</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>sept 15, 2023 05:50:48 p. m.</td>
+										<td class='linked' test-id='12'>Delete Buzz Newsfeed</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@loginWithValidCredentials</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>sept 15, 2023 05:51:00 p. m.</td>
+										<td class='linked' test-id='25'>Login into Orange HRM web page with valid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@AddBuzzMessage</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>sept 15, 2023 05:50:22 p. m.</td>
+										<td class='linked' test-id='2'>New Buzz Newsfeed</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@loginWithInvalidCredentials</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>sept 15, 2023 05:51:23 p. m.</td>
+										<td class='linked' test-id='44'>Login into Orange HRM web page with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
 						<span class='category-name'>@EditContactInfo</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
@@ -385,8 +847,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>sept 13, 2023 09:21:32 a. m.</td>
-										<td class='linked' test-id='14'>Edit user contact details</td>
+										<td>sept 15, 2023 05:51:53 p. m.</td>
+										<td class='linked' test-id='65'>Edit user contact details</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -418,8 +880,41 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>sept 13, 2023 09:21:02 a. m.</td>
-										<td class='linked' test-id='2'>Edit user personal details</td>
+										<td>sept 15, 2023 05:51:31 p. m.</td>
+										<td class='linked' test-id='53'>Edit user personal details</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@logoutCorrectly</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>sept 15, 2023 05:51:11 p. m.</td>
+										<td class='linked' test-id='34'>Logout correctly after successful login</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -444,37 +939,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>18</div>
+					<div class='panel-lead'>56</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>sept 13, 2023 09:21:01 a. m.</div>
+					<div class='panel-lead'>sept 15, 2023 05:50:20 p. m.</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>sept 13, 2023 09:21:45 a. m.</div>
+			 		<div class='panel-lead'>sept 15, 2023 05:52:20 p. m.</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 43.612</div>
+					<div class='panel-lead'>00 01 59.999</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -488,6 +983,42 @@
 							<th>Failed</th>
 							<th>Skipped</th>
 							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@DeleteBuzzMessage</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@loginWithValidCredentials</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@AddBuzzMessage</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@loginWithInvalidCredentials</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
 						</tr>
 						<tr>
 							<td>@EditContactInfo</td>
@@ -507,6 +1038,15 @@
 									100%
 							</td>
 						</tr>
+						<tr>
+							<td>@logoutCorrectly</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -518,23 +1058,23 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
+                parentCount: 4,
+				passParent: 4,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 2,
-				passChild: 2,
+				childCount: 8,
+				passChild: 8,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 18,
-				passGrandChild: 18,
+				grandChildCount: 56,
+				passGrandChild: 56,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -546,7 +1086,7 @@
 		
 		<script>
 			var timeline = {
-			        "Edit MyInfo on OrangeHRM":42.899
+			        "Add Buzz Message on OrangeHRM":38.284,"Login OrangeHRM App":31.562,"Edit MyInfo on OrangeHRM":41.245,"Search sector on OrangeHRM":7.481
 			};
 		</script>
 		

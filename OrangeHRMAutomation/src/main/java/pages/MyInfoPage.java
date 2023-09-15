@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Objects;
 
 public class MyInfoPage {
     WebDriver driver;
@@ -25,21 +26,29 @@ public class MyInfoPage {
 
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div[1]/div/div/div[2]/div[2]/div[2]/input")
+    //@FindBy(xpath = "//input[contains(@class, 'oxd-input--active')]")
+    //@FindBy(xpath = "//input[@placeholder='Middle name']")
     WebElement middleNameTextBox;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div[2]/div[1]/div/div[2]/input")
     WebElement driversLicenseNumber;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[5]/button")
+    //@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[5]/button")
+    @FindBy(xpath = "//div/p/following-sibling::button")
     WebElement saveButton;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[4]/button")
     WebElement saveContactButton;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div/div[2]/div/div[2]/input")
+    //@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div/div[2]/div/div[2]/input")
+    //@FindBy(xpath = "//input[contains(@class, 'oxd-input oxd-input--active') and @modelmodifiers='[object Object]']")
+    //@FindBy(xpath = "//input[contains(@class, 'oxd-input--active') and @placeholder='Mobile Number']")
+    //@FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div/div[2]/div/div[2]/input")
+    @FindBy(xpath="//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/div[2]/div[1]/div[2]/input[1]")
     WebElement mobileNumberTextBox;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/div/div[2]/div/div[2]/input")
+    //@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/div/div[2]/div/div[2]/input")
+    @FindBy(xpath="//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[1]/div[2]/div[1]/div[2]/input[1]")
     WebElement otherEmailTextBox;
 
     @FindBy(xpath = "//*[@id=\"oxd-toaster_1\"]")
@@ -69,6 +78,10 @@ public class MyInfoPage {
         System.out.println(middleNameTextBox.getText());
     }
 
+    public String verifyMiddleNameTextBox() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(middleNameTextBox));
+        return middleNameTextBox.getText();
+    }
     public void setDriversLicenseNumber(String num)
     {
         wait.until(ExpectedConditions.visibilityOf(driversLicenseNumber));

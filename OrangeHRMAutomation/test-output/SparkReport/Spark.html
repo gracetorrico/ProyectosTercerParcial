@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">sept 13, 2023 09:21:01 a. m.</span></a>
+<a href="#"><span class="badge badge-primary">sept 15, 2023 05:50:20 p. m.</span></a>
 </li>
 </ul>
 </div>
@@ -79,7 +79,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@EditContactInfo</a><a class="dropdown-item" href="#">@EditPersonalDetails</a>
+<a class="dropdown-item" href="#">@DeleteBuzzMessage</a><a class="dropdown-item" href="#">@loginWithValidCredentials</a><a class="dropdown-item" href="#">@AddBuzzMessage</a><a class="dropdown-item" href="#">@loginWithInvalidCredentials</a><a class="dropdown-item" href="#">@EditContactInfo</a><a class="dropdown-item" href="#">@EditPersonalDetails</a><a class="dropdown-item" href="#">@logoutCorrectly</a>
 </ul>
 </li>
 </ul>
@@ -90,9 +90,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Edit MyInfo on OrangeHRM</p>
+            <p class="name">Add Buzz Message on OrangeHRM</p>
             <p class="text-sm">
-              <span>9:21:02</span> / <span>00:00:42:899</span>
+              <span>17:50:22</span> / <span>00:00:38:284</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -100,10 +100,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Edit MyInfo on OrangeHRM</h5>
-<span class='badge badge-success'>09.13.2023 9:21:02</span>
-<span class='badge badge-danger'>09.13.2023 9:21:45</span>
-<span class='badge badge-default'>00:00:42:899</span>
+<h5 class="test-status text-pass">Add Buzz Message on OrangeHRM</h5>
+<span class='badge badge-success'>09.15.2023 17:50:22</span>
+<span class='badge badge-danger'>09.15.2023 17:51:00</span>
+<span class='badge badge-default'>00:00:38:284</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -115,7 +115,292 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Edit user personal details</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>New Buzz Newsfeed</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.CommonSteps.goToSauceLoginPage()">
+                <span>Given I am in Orange HRM Home web page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.clickOnBuzzNewsFeed()">
+                <span>Given I click on Buzz NewsFeed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.addMessage(java.lang.String)">
+                <span>And I add the following text "Hello, world! Ready to roll" to the buzz newsfeed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.clickOnPostButton()">
+                <span>And I click on Post Button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.verifySuccessPostMessage()">
+                <span>Then A success message should be shown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.verifyMessageDisplayed(java.lang.String)">
+                <span>And The message should be displayed as "Hello, world! Ready to roll"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.logout()">
+                <span>And I logout</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Delete Buzz Newsfeed</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.CommonSteps.goToSauceLoginPage()">
+                <span>Given I am in Orange HRM Home web page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.clickOnBuzzNewsFeed()">
+                <span>Given I click on Buzz NewsFeed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.addMessage(java.lang.String)">
+                <span>And I add the following text "Testing 2" to the buzz newsfeed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.clickOnPostButton()">
+                <span>And I click on Post Button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.verifySuccessPostMessage()">
+                <span>Then A success message should be shown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.clickOnDeleteButton()">
+                <span>Then I click on delete button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BuzzSteps.confirmDeletingTheMessage()">
+                <span>And I confirm deleting the message</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MyInfoSteps.aSuccessMessageShouldBeDisplayed()">
+                <span>Then A success message should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.logout()">
+                <span>And I logout</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login OrangeHRM App</p>
+            <p class="text-sm">
+              <span>17:51:00</span> / <span>00:00:31:562</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login OrangeHRM App</h5>
+<span class='badge badge-success'>09.15.2023 17:51:00</span>
+<span class='badge badge-danger'>09.15.2023 17:51:31</span>
+<span class='badge badge-default'>00:00:31:562</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="25"><span class="badge log pass-bg mr-2">Pass</span>Login into Orange HRM web page with valid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.CommonSteps.goToOrangePage()">
+                <span>Given I am in Orange HRM web page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)">
+                <span>Given I set the user name field with "Admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)">
+                <span>And I set the password field with "admin123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clickOnLoginButton()">
+                <span>When I click on the login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()">
+                <span>Then The home page should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.logout()">
+                <span>And I logout</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="34"><span class="badge log pass-bg mr-2">Pass</span>Logout correctly after successful login</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.CommonSteps.goToOrangePage()">
+                <span>Given I am in Orange HRM web page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)">
+                <span>Given I set the user name field with "Admin"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)">
+                <span>And I set the password field with "admin123"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clickOnLoginButton()">
+                <span>When I click on the login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()">
+                <span>Then The home page should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.logout()">
+                <span>And I logout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.theLoginPageShouldBeDisplayed()">
+                <span>Then The login page should be displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>Login into Orange HRM web page with invalid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.CommonSteps.goToOrangePage()">
+                <span>Given I am in Orange HRM web page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)">
+                <span>Given I set the user name field with "wrong_user"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)">
+                <span>And I set the password field with "wrong_password"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clickOnLoginButton()">
+                <span>When I click on the login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.verifyLoginErrorMessage(java.lang.String)">
+                <span>Then An error message that says "Invalid Credentials" should be displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="52"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Edit MyInfo on OrangeHRM</p>
+            <p class="text-sm">
+              <span>17:51:31</span> / <span>00:00:41:245</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Edit MyInfo on OrangeHRM</h5>
+<span class='badge badge-success'>09.15.2023 17:51:31</span>
+<span class='badge badge-danger'>09.15.2023 17:52:13</span>
+<span class='badge badge-default'>00:00:41:245</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=52</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Edit user personal details</div>
       </div>
     </div>
         <div class="collapse">
@@ -141,7 +426,7 @@
       </div>
               </div>
               <div class="step pass-bg" title="stepDefinitions.MyInfoSteps.iChangeMiddleNameTo(java.lang.String)">
-                <span>Then I change Middle Name to "Carlos"</span>
+                <span>Then I change Middle Name to "Benjamin"</span>
       <div>
       </div>
               </div>
@@ -171,7 +456,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Edit user contact details</div>
+        <div class="node" id="65"><span class="badge log pass-bg mr-2">Pass</span>Edit user contact details</div>
       </div>
     </div>
         <div class="collapse">
@@ -197,7 +482,7 @@
       </div>
               </div>
               <div class="step pass-bg" title="stepDefinitions.MyInfoSteps.iChangeMobileNumberTo(java.lang.String)">
-                <span>Then I change mobile number to "568924214"</span>
+                <span>Then I change mobile number to "00000"</span>
       <div>
       </div>
               </div>
@@ -227,6 +512,67 @@
 </div>
           </div>
         </li>
+        <li class="test-item"  status="pass" test-id="77"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Search sector on OrangeHRM</p>
+            <p class="text-sm">
+              <span>17:52:13</span> / <span>00:00:07:481</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Search sector on OrangeHRM</h5>
+<span class='badge badge-success'>09.15.2023 17:52:13</span>
+<span class='badge badge-danger'>09.15.2023 17:52:20</span>
+<span class='badge badge-default'>00:00:07:481</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=77</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="78"><span class="badge log pass-bg mr-2">Pass</span>Edit user personal details</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.CommonSteps.goToSauceLoginPage()">
+                <span>Given I am in Orange HRM Home web page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.iSearchOnSearchMenu(java.lang.String)">
+                <span>Given I Search "Buzz" on search menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.theOptionShouldBeTheOnlyOne(java.lang.String)">
+                <span>Then The option "Buzz" should be the only one</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.HomeSteps.logout()">
+                <span>And I logout</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -240,10 +586,154 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">7</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@DeleteBuzzMessage</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@DeleteBuzzMessage</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:50:48 p. m.</td>
+<td>
+<a href="#" class="linked" test-id='1' id='12'>Delete Buzz Newsfeed</a>
+<div class="">
+<span class="badge badge-default">Add Buzz Message on OrangeHRM.Delete Buzz Newsfeed</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@loginWithValidCredentials</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@loginWithValidCredentials</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:51:00 p. m.</td>
+<td>
+<a href="#" class="linked" test-id='24' id='25'>Login into Orange HRM web page with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Login OrangeHRM App.Login into Orange HRM web page with valid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@AddBuzzMessage</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AddBuzzMessage</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:50:22 p. m.</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>New Buzz Newsfeed</a>
+<div class="">
+<span class="badge badge-default">Add Buzz Message on OrangeHRM.New Buzz Newsfeed</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@loginWithInvalidCredentials</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@loginWithInvalidCredentials</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:51:23 p. m.</td>
+<td>
+<a href="#" class="linked" test-id='24' id='44'>Login into Orange HRM web page with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">Login OrangeHRM App.Login into Orange HRM web page with invalid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
@@ -268,9 +758,9 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:21:32 a. m.</td>
+<td>17:51:53 p. m.</td>
 <td>
-<a href="#" class="linked" test-id='1' id='14'>Edit user contact details</a>
+<a href="#" class="linked" test-id='52' id='65'>Edit user contact details</a>
 <div class="">
 <span class="badge badge-default">Edit MyInfo on OrangeHRM.Edit user contact details</span>
 </div>
@@ -304,11 +794,47 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:21:02 a. m.</td>
+<td>17:51:31 p. m.</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Edit user personal details</a>
+<a href="#" class="linked" test-id='52' id='53'>Edit user personal details</a>
 <div class="">
 <span class="badge badge-default">Edit MyInfo on OrangeHRM.Edit user personal details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@logoutCorrectly</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@logoutCorrectly</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:51:11 p. m.</td>
+<td>
+<a href="#" class="linked" test-id='24' id='34'>Logout correctly after successful login</a>
+<div class="">
+<span class="badge badge-default">Login OrangeHRM App.Logout correctly after successful login</span>
 </div>
 </td>
 </tr>
@@ -329,19 +855,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>sept 13, 2023 09:21:01 a. m.</h3>
+<h3>sept 15, 2023 05:50:20 p. m.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>sept 13, 2023 09:21:45 a. m.</h3>
+<h3>sept 15, 2023 05:52:20 p. m.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>4</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -364,7 +890,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>1</b> features passed
+<b>4</b> features passed
 </small>
 </div>
 <div>
@@ -386,7 +912,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>2</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>8</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -406,7 +932,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>18</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>56</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -425,7 +951,7 @@
 </div></div>
 <script>
 var timeline = {
-"Edit MyInfo on OrangeHRM":42.899
+"Add Buzz Message on OrangeHRM":38.284,"Login OrangeHRM App":31.562,"Edit MyInfo on OrangeHRM":41.245,"Search sector on OrangeHRM":7.481
 };
 </script>
 <div class="row">
@@ -434,6 +960,38 @@ var timeline = {
 <div class="card-header"><p>Tags</p></div>
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@DeleteBuzzMessage</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@loginWithValidCredentials</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@AddBuzzMessage</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@loginWithInvalidCredentials</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
 <tr>
 <td>@EditContactInfo</td>
 <td>1</td>
@@ -450,6 +1008,14 @@ var timeline = {
 <td>0</td>
 <td>100%</td>
 </tr>
+<tr>
+<td>@logoutCorrectly</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -459,18 +1025,18 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
+passParent: 4,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 2,
+passChild: 8,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 18,
+passGrandChild: 56,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,

@@ -7,7 +7,7 @@ Feature: Edit MyInfo on OrangeHRM
       Given I click on My Info button
       And My Info page is displayed
       When I click on Personal Details button
-      Then I change Middle Name to "Carlos"
+      Then I change Middle Name to "Benjamin"
       And I change Drivers License number to "34650211"
       And I click on Save button
       Then A success message should be displayed
@@ -18,7 +18,8 @@ Feature: Edit MyInfo on OrangeHRM
     Given I click on My Info button
     And My Info page is displayed
     When I click on Contact Details button
-    Then I change mobile number to "568924214"
+    ##Then I change mobile number to "568924214"
+    Then I change mobile number to "00000"
     And I change second email to "testing@orange.hrm"
     And I click on Save Contact button
     Then A success message should be displayed

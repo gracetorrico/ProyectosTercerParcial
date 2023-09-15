@@ -31,4 +31,14 @@ public class HomeSteps {
     public void clickOnBuzzNewsFeed() {
         homePage.clickOnBuzzButton();
     }
+
+    @Given("I Search {string} on search menu")
+    public void iSearchOnSearchMenu(String str) {
+        homePage.setSearchTextBox(str);
+    }
+
+    @Then("The option {string} should be the only one")
+    public void theOptionShouldBeTheOnlyOne(String str) {
+        homePage.itemIsTheOnlyOne(str);
+    }
 }
